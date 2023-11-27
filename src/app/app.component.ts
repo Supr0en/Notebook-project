@@ -11,7 +11,7 @@ import { TextContainerComponent } from './components/text-container/text-contain
     <body>
       <div class="book">
         <div class="page" name="left" #left>
-          @defer (on idle) {
+          @defer (on interaction(left)) {
             <app-text-container />
           } @placeholder {
             <span>Click page to start taking notes</span>
@@ -19,7 +19,7 @@ import { TextContainerComponent } from './components/text-container/text-contain
             <span>creating component failed</span>
           }
         </div>
-        <div class="page" name="right" (click)="true" #right>
+        <div class="page" name="right" #right>
         </div>
       </div>
     </body>

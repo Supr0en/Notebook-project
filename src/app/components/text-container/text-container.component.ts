@@ -13,8 +13,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './text-container.component.css'
 })
 export class TextContainerComponent {
-  TextArray = Array<string>();
+  TextArray = Array<{text: string, id: number}>();
   pushInTextArray(newText: string) {
-    if (newText != null) this.TextArray.push(newText);
+    if (newText != null) this.TextArray.push();
   }
 }
